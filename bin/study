@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BINPATH=`dirname $0`
+if [[ -f "$BINPATH/../study/main.py" ]] ; then # Try relative path
+    python "$BINPATH/../study/main.py" $@
+else # Try a default location
+    python "/usr/local/lib/study/study/main.py" $@
+fi
